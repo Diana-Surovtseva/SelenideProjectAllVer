@@ -1,4 +1,3 @@
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,12 +18,10 @@ public class LoginTest {
 
     @Test
     public void loginTest() {
-
         loginPage.navigateTo();
         loginPage.enterUserName();
         loginPage.setUserPassInput();
         loginPage.clickLogBut();
-        homePage.userIconIsDisplayed().shouldBe(Condition.visible);
+        homePage.userIconIsDisplayed();
     }
-
 }
