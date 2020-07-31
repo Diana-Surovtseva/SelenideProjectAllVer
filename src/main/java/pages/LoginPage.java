@@ -1,8 +1,11 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.WebDriverFactory;
+
+import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -13,6 +16,12 @@ public class LoginPage {
     }
 
     public void navigateTo() {
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         open("https://jira.hillel.it/secure/Dashboard.jspa");
     }
 
