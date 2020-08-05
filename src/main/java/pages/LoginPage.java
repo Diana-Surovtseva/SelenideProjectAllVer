@@ -26,11 +26,11 @@ public class LoginPage {
     }
 
     public void enterUserName() {
-        $(By.id("login-form-username")).setValue("webinar5");
+        $(By.id("login-form-username")).setValue("DianaSurovtseva");
     }
 
     public void setUserPassInput() {
-        $(By.id("login-form-password")).setValue("webinar5");
+        $(By.id("login-form-password")).setValue("DianaSurovtseva");
     }
 
     public void clickLogBut() {

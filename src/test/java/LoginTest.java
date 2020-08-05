@@ -1,4 +1,6 @@
 import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -6,6 +8,7 @@ import pages.LoginPage;
 
 
 public class LoginTest {
+    WebDriver driver = null;
     LoginPage loginPage = null;
     HomePage homePage = null;
 
@@ -23,5 +26,9 @@ public class LoginTest {
         loginPage.setUserPassInput();
         loginPage.clickLogBut();
         homePage.userIconIsDisplayed();
+    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
     }
 }
