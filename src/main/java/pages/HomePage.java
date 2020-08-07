@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.WebDriverFactory;
 import static com.codeborne.selenide.Selenide.*;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class HomePage {
     WebDriverWait wait = null;
@@ -26,4 +27,12 @@ public class HomePage {
     public void clickViewIssue() {
         $(By.xpath("//*[contains (text(),'WEBINAR-11962')]")).should(Condition.visible).click();
     }
+    public void isButtonCreateLinkPresent(){
+       // WebDriverWait wait = new WebDriverWait(driver,10);
+        $(By.id("create_link")).shouldBe(Condition.visible);
+    }
+    public void clickCreateIssue(){
+        $(By.id("create_link")).click();
+    }
+
 }

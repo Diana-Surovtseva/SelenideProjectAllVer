@@ -10,7 +10,6 @@ import pages.TicketPage;
 import static org.testng.Assert.assertTrue;
 
 public class AddCommentTest {
-    WebDriver driver = null;
     LoginPage loginPage = null;
     HomePage homePage = null;
     TicketPage ticketPage = null;
