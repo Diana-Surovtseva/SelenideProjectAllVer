@@ -31,9 +31,4 @@ public class ViewTicketTest {
        ticketPage.sumIsPresent();
        ticketPage.urlContains("WEBINAR-11962");
     }
-
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
 }

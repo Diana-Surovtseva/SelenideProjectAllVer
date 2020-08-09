@@ -6,6 +6,9 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.TicketPage;
 
+import static java.lang.Thread.sleep;
+import static org.testng.Assert.assertTrue;
+
 public class CreateNewIssue {
     HomePage homePage = null;
     LoginPage loginPage = null;
@@ -25,11 +28,17 @@ public class CreateNewIssue {
         loginPage.enterUserName();
         loginPage.setUserPassInput();
         loginPage.clickLogBut();
+        createNewTicketWindow = new CreateNewTicketWindow();
     }
 
     @Test
     public void createTicket() {
-homePage.isButtonCreateLinkPresent();
+        homePage.isButtonCreateLinkPresent();
+        try {
+            sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         homePage.clickCreateIssue();
         createNewTicketWindow.isProjectFieldDisplayed();
         createNewTicketWindow.clearProjectField();
@@ -38,13 +47,18 @@ homePage.isButtonCreateLinkPresent();
 
         createNewTicketWindow.isIssueTypeFieldDisplayed();
         createNewTicketWindow.clearIssueTypeField();
-        createNewTicketWindow.enterIssueTypeField("Task");
+        createNewTicketWindow.enterIssueTypeField();
         createNewTicketWindow.pressTabAfterIssueTypeField();
+        try {
+            sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         createNewTicketWindow.isSummaryFieldDisplayed();
-        createNewTicketWindow.enterSummary("Test task");
+        createNewTicketWindow.enterSummary();
         createNewTicketWindow.clearReporterField();
-        createNewTicketWindow.enterReporterField("DianaSurovtseva");
+        createNewTicketWindow.enterReporterField();
 
         createNewTicketWindow.pressCreateIssueButton();
 

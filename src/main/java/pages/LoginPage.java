@@ -1,11 +1,7 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.WebDriverFactory;
-
-import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -26,16 +22,14 @@ public class LoginPage {
     }
 
     public void enterUserName() {
-        $(By.id("login-form-username")).setValue("DianaSurovtseva");
+        $("#login-form-username").setValue("DianaSurovtseva");
     }
 
     public void setUserPassInput() {
-        $(By.id("login-form-password")).setValue("DianaSurovtseva");
+        $("#login-form-password").setValue("DianaSurovtseva");
     }
 
     public void clickLogBut() {
         $("#login").click();
     }
-
 }
-
