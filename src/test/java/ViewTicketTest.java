@@ -28,7 +28,8 @@ public class ViewTicketTest {
     public void viewTicket() {
         homePage.userIconIsDisplayed();
         homePage.clickViewIssue();
-       ticketPage.sumIsPresent();
-       ticketPage.urlContains("WEBINAR-11962");
+        //Есть ли тут проверка?
+        ticketPage.sumIsPresent();
+        ticketPage.urlContains();
     }
 }

@@ -7,8 +7,6 @@ import utils.WebDriverFactory;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomePage {
-    WebDriverWait wait = null;
-    WebDriver driver = null;
 
 //    private SelenideElement viewIssue = $(By.xpath("//*[@data-issue-key='WEBINAR-11962']"));
 //    private SelenideElement toolBar = $(By.xpath("//*[@class='ops-menus aui-toolbar2']"));
@@ -22,8 +20,8 @@ public class HomePage {
     }
 
     public void clickViewIssue() {
-        sleep(1000);
-        $("//*[contains (text(),'WEBINAR-11962')]").click();
+        //sleep(1000);
+        $("a[href$='WEBINAR-11962']").click();
     }
     public void isButtonCreateLinkPresent(){
         $("#create_link").shouldBe(Condition.visible);
