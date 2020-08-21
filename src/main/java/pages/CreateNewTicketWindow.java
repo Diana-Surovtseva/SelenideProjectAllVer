@@ -37,19 +37,19 @@ public class CreateNewTicketWindow {
     }
 
     public void isSummaryFieldDisplayed() {
-        $("summary").shouldBe(Condition.visible);
+        $("#summary").shouldBe(Condition.visible);
     }
 
     public void enterSummary() {
-        $("summary").setValue("Test task");
+        $("#summary").setValue("Test task");
     }
 
     public void clearReporterField() {
-        $("reporter-field").clear();
+        $("#reporter-field").clear();
     }
 
     public void enterReporterField() {
-        $("reporter-field").setValue("DianaSurovtseva");
+        $("#reporter-field").setValue("DianaSurovtseva");
     }
 public void pressCreateIssueButton(){
        $("#create-issue-submit").click();

@@ -5,8 +5,6 @@ import pages.CreateNewTicketWindow;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.TicketPage;
-
-import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertTrue;
 
 public class CreateNewIssue {
@@ -34,11 +32,7 @@ public class CreateNewIssue {
     @Test
     public void createTicket() {
         homePage.isButtonCreateLinkPresent();
-        try {
-            sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         homePage.clickCreateIssue();
         createNewTicketWindow.isProjectFieldDisplayed();
         createNewTicketWindow.clearProjectField();
@@ -49,24 +43,16 @@ public class CreateNewIssue {
         createNewTicketWindow.clearIssueTypeField();
         createNewTicketWindow.enterIssueTypeField();
         createNewTicketWindow.pressTabAfterIssueTypeField();
-        try {
-            sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         createNewTicketWindow.isSummaryFieldDisplayed();
         createNewTicketWindow.enterSummary();
         createNewTicketWindow.clearReporterField();
         createNewTicketWindow.enterReporterField();
 
         createNewTicketWindow.pressCreateIssueButton();
-
+//Происходит ли проверка?
         assertTrue(createNewTicketWindow.isPopUpPresent());
 
-        assertTrue(createNewTicketWindow.getPopUpText().
-
-                contains("WEBINAR"));
+    assertTrue(createNewTicketWindow.getPopUpText().contains("WEBINAR"));
 
     }
 }
