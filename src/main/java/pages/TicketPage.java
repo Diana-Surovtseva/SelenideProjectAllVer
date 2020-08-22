@@ -20,10 +20,10 @@ public class TicketPage {
         $("#comment").setValue("My comment");
         $("#issue-comment-add-submit").click();
     }
-  public void isCommentAdded(){
-        String commentText =$("div.comment:focus").getText();
-      return commentText.contains("My comment");
-  }
+    public boolean isCommentAdded(){
+        String commentText = $(".issue-data-block.activity-comment.twixi-block.expanded.focused").getText();
+        return commentText.contains("My comment");
+    }
 
 //    }
 //    public String getText(){

@@ -49,10 +49,9 @@ public class CreateNewIssue {
         createNewTicketWindow.enterReporterField();
 
         createNewTicketWindow.pressCreateIssueButton();
-//Происходит ли проверка?
-        assertTrue(createNewTicketWindow.isPopUpPresent());
 
-    assertTrue(createNewTicketWindow.getPopUpText().contains("WEBINAR"));
+        assertTrue(createNewTicketWindow.isPopUpPresent());
+        assertTrue(createNewTicketWindow.getPopUpText().contains("WEBINAR"));
 
     }
 }

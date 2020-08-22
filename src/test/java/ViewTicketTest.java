@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -28,8 +29,7 @@ public class ViewTicketTest {
     public void viewTicket() {
         homePage.userIconIsDisplayed();
         homePage.clickViewIssue();
-        //Есть ли тут проверка?
         ticketPage.sumIsPresent();
-        ticketPage.urlContains();
+        Assert.assertTrue(ticketPage.urlContains());
     }
 }
