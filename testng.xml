@@ -5,6 +5,10 @@
     <test name="TestOnSelenide">
         <classes>
             <class name="LoginTest"/>
+            <class name="ViewTicketTest"/>
+            <class name="AddCommentTest"/>
+            <class name="ViewTicketTest"/>
+
         </classes>
     </test>
 </suite>

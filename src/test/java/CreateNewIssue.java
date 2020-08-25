@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.CreateNewTicketWindow;
 import pages.HomePage;
@@ -15,7 +16,7 @@ public class CreateNewIssue {
     CreateNewTicketWindow createNewTicketWindow = null;
 
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
         loginPage = new LoginPage();
 

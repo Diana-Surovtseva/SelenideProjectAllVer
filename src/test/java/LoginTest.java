@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -11,7 +12,7 @@ public class LoginTest {
     LoginPage loginPage = null;
     HomePage homePage = null;
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
         loginPage = new LoginPage();
         homePage = new HomePage();

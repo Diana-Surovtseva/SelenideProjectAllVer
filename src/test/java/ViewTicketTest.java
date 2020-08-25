@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -13,7 +14,7 @@ public class ViewTicketTest {
     LoginPage loginPage = null;
     TicketPage ticketPage = null;
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
         loginPage = new LoginPage();
         homePage = new HomePage();
