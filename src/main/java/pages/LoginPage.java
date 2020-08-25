@@ -12,12 +12,6 @@ public class LoginPage {
     }
 
     public void navigateTo() {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         open("https://jira.hillel.it/secure/Dashboard.jspa");
     }
 

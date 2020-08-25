@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class CreateNewTicketWindow {
@@ -51,14 +52,17 @@ public class CreateNewTicketWindow {
     public void enterReporterField() {
         $("#reporter-field").setValue("DianaSurovtseva");
     }
-public void pressCreateIssueButton(){
-       $("#create-issue-submit").click();
-}
-public boolean isPopUpPresent(){
-     return $("#aui-flag-container").should(Condition.visible).isDisplayed();
-}
-public String getPopUpText(){
-   String popUpText =  $("#aui-flag-container").getText();
-   return popUpText;
-}
+
+    public void pressCreateIssueButton() {
+        $("#create-issue-submit").click();
+    }
+
+    public boolean isPopUpPresent() {
+        return $("#aui-flag-container").should(Condition.visible).isDisplayed();
+    }
+
+    public String getPopUpText() {
+        String popUpText = $("#aui-flag-container").getText();
+        return popUpText;
+    }
 }

@@ -5,6 +5,7 @@ import pages.CreateNewTicketWindow;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.TicketPage;
+
 import static org.testng.Assert.assertTrue;
 
 public class CreateNewIssue {

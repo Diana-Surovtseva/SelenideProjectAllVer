@@ -1,6 +1,6 @@
 import com.codeborne.selenide.Configuration;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -15,7 +15,7 @@ public class AddCommentTest {
     TicketPage ticketPage = null;
 
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
         loginPage = new LoginPage();
         homePage = new HomePage();
@@ -30,26 +30,22 @@ public class AddCommentTest {
     @Test
     public void addCommentToTicket() {
 
-         homePage.clickViewIssue();
-         ticketPage.addComment();
-         assertTrue(ticketPage.isCommentAdded());
+        homePage.clickViewIssue();
+        ticketPage.addComment();
+        assertTrue(ticketPage.isCommentAdded());
     }
 
-  @Test
+    @Test
 
     public void dellCommentFromTicket() {
-//        homePage.clickViewIssue();
-//        String textLastComment = ticketPage.getLastComment();
-//        ticketPage.clickCommentDelButton();
-//        ticketPage.SubmitDelete();
-//        String textLastComment2 = ticketPage.getLastComment();
-//        assertTrue(!textLastComment2.contains(textLastComment));
+        homePage.clickViewIssue();
+        String textLastComment = ticketPage.getLastComment();
+        ticketPage.clickCommentDelButton();
+        ticketPage.SubmitDelete();
+        ticketPage.updateListComments();
+        String textLastComment2 = ticketPage.getLastComment();
+        assertTrue(!textLastComment2.contains(textLastComment));
 
     }
 
-
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
 }
